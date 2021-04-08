@@ -7,10 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-demo-helloworld" />
+        <module name="spring-boot-demo-configuration" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-boot-demo-helloworld" target="1.5" />
+      <module name="spring-boot-demo-configuration" target="1.8" />
+      <module name="spring-boot-demo-helloworld" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-demo-configuration" options="-parameters" />
+      <module name="spring-boot-demo-helloworld" options="-parameters" />
+    </option>
   </component>
 </project>
